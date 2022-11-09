@@ -61,7 +61,7 @@ navigator.geolocation.getCurrentPosition((position) => {
     .catch((err) => console.error(err));
 });
 
-fetch("https://api.goprogram.ai/inspiration")
+fetch("https://api.goprogram.ai/inspiration", { cache: "reload" })
   .then((res) => res.json())
   .then((data) => {
     document.getElementById("quote").innerHTML = `
