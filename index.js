@@ -14,8 +14,6 @@ fetch(
 
     caches.open(cacheName).then((cache) => {
       cache.keys().then((arrayOfRequest) => {
-        // setInterval(() => {});
-        console.log(arrayOfRequest);
         document.body.style.backgroundImage = `url(${arrayOfRequest[0].url})`;
       });
     });
